@@ -1,0 +1,26 @@
+type RoboDto {
+  id: String!
+  head: String!
+  leftElbow: String!
+  leftWrist: String!
+  rightElbow: String!
+  rightWrist: String!
+}
+
+type Query {
+  robo: [RoboDto!]!
+}
+
+type Mutation {
+  createRobo(robo: InputRobo!): RoboDto!
+  updateRobo(id: String!, robo: InputRobo!): RoboDto!
+}
+
+input InputRobo {
+  id: String
+  head: String!
+  leftElbow: String!
+  leftWrist: String!
+  rightElbow: String!
+  rightWrist: String!
+}
