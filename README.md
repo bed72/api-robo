@@ -1,17 +1,22 @@
+<h1 align="center">
+ :robot: R.O.B.O
+</h1>
 
+<p align="center">
+  <img src="https://nestjs.com/img/logo_text.svg" width="120" alt="Nest Logo" />
+</p>
 
 ## Description
 
-[R.O.B.O]  (Robô Operacional Binariamente
-Orientado).
+[R.O.B.O]  (Binary Operational Robot Oriented).
 
-## Installation
+## :hammer: Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## :computer: Running the app
 
 ```bash
 # development
@@ -24,7 +29,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## :wrench: Test
 
 ```bash
 # unit tests
