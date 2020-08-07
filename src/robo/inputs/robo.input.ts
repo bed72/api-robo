@@ -1,3 +1,5 @@
+import { Elbow, Pulse } from '../enums/arm.enum';
+import { HeadComposed } from '../enums/head.enum';
 import { Field, InputType } from '@nestjs/graphql';
 
 @InputType()
@@ -6,18 +8,18 @@ export class InputRobo {
   @Field(() => String)
   readonly id: string;
   /** Cabeça */
-  @Field(() => String)
-  readonly head: string;
+  @Field(() => HeadComposed)
+  readonly head: HeadComposed;
   /** Cotovelo Esquerdo */
-  @Field(() => String)
-  readonly leftElbow: string;
+  @Field(() => Elbow)
+  readonly leftElbow: Elbow;
   /** Pulso Esquerdo */
-  @Field(() => String)
-  readonly leftWrist: string;
+  @Field(() => Pulse)
+  readonly leftWrist: Pulse;
   /** Cotovelo Direito */
-  @Field(() => String)
-  readonly rightElbow: string;
+  @Field(() => Elbow)
+  readonly rightElbow: Elbow;
   /** Pulso Direito */
-  @Field(() => String)
-  readonly rightWrist: string;
+  @Field(() => Pulse)
+  readonly rightWrist: Pulse;
 }

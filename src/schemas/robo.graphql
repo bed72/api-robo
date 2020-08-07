@@ -1,10 +1,48 @@
+# Cabeça
+type HeadRotation {
+  minusNinetyRotation: String 
+  minusFortyFiveRotation: String
+  initial: String
+  fortyFiveRotation: String
+  ninetyRotation: String 
+}
+
+type HeadSlope {
+  up: String
+  down: String
+  initial: String
+}
+
+type HeadComposed {
+  headRotation: HeadRotation!
+  headSlope: HeadSlope!
+}
+
+# Braços
+type Elbow {
+  initial: String 
+  slightlyContracted: String
+  contracted: String
+  stronglyContracted: String
+}
+
+type Pulse {
+  rotationToMinusNinety: String 
+  rotationToMinusFortyFive: String 
+  initial: String
+  rotationToFortyFive: String
+  rotationToNinety: String
+  rotationToHundredAndThirtyFive: String 
+  rotationToHundredAndEighty: String  
+}
+
 type RoboDto {
-  id: String!
-  head: String!
-  leftElbow: String!
-  leftWrist: String!
-  rightElbow: String!
-  rightWrist: String!
+  id: String
+  head: HeadComposed
+  leftElbow: Elbow
+  leftWrist: Pulse
+  rightElbow: Elbow
+  rightWrist: Pulse
 }
 
 type Query {
@@ -18,9 +56,9 @@ type Mutation {
 
 input InputRobo {
   id: String
-  head: String!
-  leftElbow: String!
-  leftWrist: String!
-  rightElbow: String!
-  rightWrist: String!
+  head: HeadComposed
+  leftElbow: Elbow
+  leftWrist: Pulse
+  rightElbow: Elbow
+  rightWrist: Pulse
 }

@@ -9,7 +9,7 @@ export class RoboService {
   constructor(
     @InjectRepository(RoboEntity)
     private readonly roboRepository: Repository<RoboEntity>,
-  ) {}
+  ) { }
 
   async createRobo(data: RoboDto): Promise<RoboEntity> {
     const robo = new RoboEntity();
