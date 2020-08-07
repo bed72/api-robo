@@ -1,18 +1,21 @@
-export enum HeadRotation {
-  minusNinetyRotation = "Rotação -90º",
-  minusFortyFiveRotation = "Rotação -45º",
-  initial = "Em Repouso",
-  fortyFiveRotation = "Rotação 45º",
-  ninetyRotation = "Rotação 90º",
+export enum Rotation {
+  minusNinetyRotation = 'minusNinetyRotation',
+  minusFortyFiveRotation = 'minusFortyFiveRotation',
+  initial = 'initial',
+  fortyFiveRotation = 'fortyFiveRotation',
+  ninetyRotation = 'ninetyRotation',
 }
 
-export enum HeadSlope {
-  up = "Para cima",
-  down = "Para baixo",
-  initial = "Em Repouso",
+export enum Slope {
+  up = 'up',
+  down = 'down',
+  initial = 'initial',
 }
+// export type Rotation =
+//   | 'Rotação -90º'
+//   | 'Rotação -45º'
+//   | 'Em Repouso'
+//   | 'Rotação 45º'
+//   | 'Rotação 90º';
 
-export enum HeadComposed {
-  HeadRotation,
-  HeadSlope
-}
+// export type Slope = 'Para cima' | 'Para baixo' | 'Em Repouso';

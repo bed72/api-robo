@@ -1,21 +1,15 @@
 {
   "type": "postgres",
-  "host": "192.168.0.103",
+  "host": "localhost",
   "port": 5432,
   "username": "postgres",
   "password": "cicada3301",
   "database": "robot",
   "synchronize": true,
   "logging": true,
-  "entities": [
-    "dist/**/*.entity{.ts,.js}"
-  ],
-  "migrations": [
-    "dist/database/migrations/*.js"
-  ],
-  "subscribers": [
-    "dist/database/subscriber/*.js"
-  ],
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "migrations": ["dist/database/migrations/*.js"],
+  "subscribers": ["dist/database/subscriber/*.js"],
   "cli": {
     "migrationsDir": "src/database/migrations"
   }

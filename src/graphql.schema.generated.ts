@@ -6,54 +6,51 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export enum Rotation {
+    minusNinetyRotation = "minusNinetyRotation",
+    minusFortyFiveRotation = "minusFortyFiveRotation",
+    initial = "initial",
+    fortyFiveRotation = "fortyFiveRotation",
+    ninetyRotation = "ninetyRotation"
+}
+
+export enum Slope {
+    up = "up",
+    down = "down",
+    initial = "initial"
+}
+
+export enum Elbow {
+    initial = "initial",
+    slightlyContracted = "slightlyContracted",
+    contracted = "contracted",
+    stronglyContracted = "stronglyContracted"
+}
+
+export enum Pulse {
+    rotationToMinusNinety = "rotationToMinusNinety",
+    rotationToMinusFortyFive = "rotationToMinusFortyFive",
+    initial = "initial",
+    rotationToFortyFive = "rotationToFortyFive",
+    rotationToNinety = "rotationToNinety",
+    rotationToHundredAndThirtyFive = "rotationToHundredAndThirtyFive",
+    rotationToHundredAndEighty = "rotationToHundredAndEighty"
+}
+
 export class InputRobo {
-    id: string;
-    head: HeadComposed;
-    leftElbow: Elbow;
-    leftWrist: Pulse;
-    rightElbow: Elbow;
-    rightWrist: Pulse;
-}
-
-export class HeadRotation {
-    minusNinetyRotation?: string;
-    minusFortyFiveRotation?: string;
-    initial?: string;
-    fortyFiveRotation?: string;
-    ninetyRotation?: string;
-}
-
-export class HeadSlope {
-    up?: string;
-    down?: string;
-    initial?: string;
-}
-
-export class HeadComposed {
-    headRotation: HeadRotation;
-    headSlope: HeadSlope;
-}
-
-export class Elbow {
-    initial?: string;
-    slightlyContracted?: string;
-    contracted?: string;
-    stronglyContracted?: string;
-}
-
-export class Pulse {
-    rotationToMinusNinety?: string;
-    rotationToMinusFortyFive?: string;
-    initial?: string;
-    rotationToFortyFive?: string;
-    rotationToNinety?: string;
-    rotationToHundredAndThirtyFive?: string;
-    rotationToHundredAndEighty?: string;
+    id?: string;
+    rotation?: Rotation;
+    slope?: Slope;
+    leftElbow?: Elbow;
+    leftWrist?: Pulse;
+    rightElbow?: Elbow;
+    rightWrist?: Pulse;
 }
 
 export class RoboDto {
     id?: string;
-    head?: HeadComposed;
+    rotation?: Rotation;
+    slope?: Slope;
     leftElbow?: Elbow;
     leftWrist?: Pulse;
     rightElbow?: Elbow;

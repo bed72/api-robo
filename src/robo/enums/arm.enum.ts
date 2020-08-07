@@ -1,21 +1,31 @@
 export enum Elbow {
-  initial = "Em Repouso",
-  slightlyContracted = "Levemente contraído",
-  contracted = "Contraído",
-  stronglyContracted = "Fortemente contraído"
+  initial = 'initial',
+  slightlyContracted = 'slightlyContracted',
+  contracted = 'contracted',
+  stronglyContracted = 'stronglyContracted',
 }
 
 export enum Pulse {
-  rotationToMinusNinety = "Rotação para -90º",
-  rotationToMinusFortyFive = "Rotação para -45º",
-  initial = "Em Repouso",
-  rotationToFortyFive = "Rotação para 45º",
-  rotationToNinety = "Rotação para 90º",
-  rotationToHundredAndThirtyFive = "Rotação para 135º",
-  rotationToHundredAndEighty = "Rotação para 180º"
+  rotationToMinusNinety = 'rotationToMinusNinety',
+  rotationToMinusFortyFive = 'rotationToMinusFortyFive',
+  initial = 'initial',
+  rotationToFortyFive = 'rotationToFortyFive',
+  rotationToNinety = 'rotationToNinety',
+  rotationToHundredAndThirtyFive = 'rotationToHundredAndThirtyFive',
+  rotationToHundredAndEighty = 'rotationToHundredAndEighty',
 }
 
-export enum ArmComposed {
-  Elbow,
-  Pulse
-}
+// export type Elbow =
+//   | 'Em Repouso'
+//   | 'Levemente contraído'
+//   | 'Contraído'
+//   | 'Fortemente contraído';
+
+// export type Pulse =
+//   | 'Rotação para -90º'
+//   | 'Rotação para -45º'
+//   | 'Em Repouso'
+//   | 'Rotação para 45º'
+//   | 'Rotação para 90º'
+//   | 'Rotação para 135º'
+//   | 'Rotação para 180º';

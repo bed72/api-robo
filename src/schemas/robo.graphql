@@ -1,44 +1,40 @@
 # Cabeça
-type HeadRotation {
-  minusNinetyRotation: String 
-  minusFortyFiveRotation: String
-  initial: String
-  fortyFiveRotation: String
-  ninetyRotation: String 
+enum Rotation {
+  minusNinetyRotation
+  minusFortyFiveRotation
+  initial
+  fortyFiveRotation
+  ninetyRotation
 }
 
-type HeadSlope {
-  up: String
-  down: String
-  initial: String
-}
-
-type HeadComposed {
-  headRotation: HeadRotation!
-  headSlope: HeadSlope!
+enum Slope {
+  up
+  down
+  initial
 }
 
 # Braços
-type Elbow {
-  initial: String 
-  slightlyContracted: String
-  contracted: String
-  stronglyContracted: String
+enum Elbow {
+  initial
+  slightlyContracted
+  contracted
+  stronglyContracted
 }
 
-type Pulse {
-  rotationToMinusNinety: String 
-  rotationToMinusFortyFive: String 
-  initial: String
-  rotationToFortyFive: String
-  rotationToNinety: String
-  rotationToHundredAndThirtyFive: String 
-  rotationToHundredAndEighty: String  
+enum Pulse {
+  rotationToMinusNinety
+  rotationToMinusFortyFive
+  initial
+  rotationToFortyFive
+  rotationToNinety
+  rotationToHundredAndThirtyFive
+  rotationToHundredAndEighty
 }
 
 type RoboDto {
   id: String
-  head: HeadComposed
+  rotation: Rotation
+  slope: Slope
   leftElbow: Elbow
   leftWrist: Pulse
   rightElbow: Elbow
@@ -56,7 +52,8 @@ type Mutation {
 
 input InputRobo {
   id: String
-  head: HeadComposed
+  rotation: Rotation
+  slope: Slope
   leftElbow: Elbow
   leftWrist: Pulse
   rightElbow: Elbow
